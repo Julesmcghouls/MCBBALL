@@ -8,7 +8,7 @@ L.titleLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Add markers for Big 12 schools
-var big12Schools = [
+let big12Schools = [
     { name: 'Baylor University', location: [31.5469, -97.1211] },
     { name: 'Iowa State University', location: [42.0264, -93.6484] },
     { name: 'University of Kansas', location: [38.9540, -95.2558] },
@@ -18,7 +18,16 @@ var big12Schools = [
     { name: 'Texas Christian University', location: [32.7092, -97.3689] },
     { name: 'Texas Tech University', location: [33.5779, -101.8552] },
     { name: 'University of Texas at Austin', location: [30.2849, -97.7341] },
-    { name: 'West Virginia University', location: [39.6437, -79.9647] }
+    { name: 'West Virginia University', location: [39.6437, -79.9647] },
+    { name: 'Central Folorida Univeristy'}, 
+    { name: 'University of Cincinnati'}, 
+    { name: 'University of Houston'},
+    { name: 'University of Arizona'},
+    { name: 'Arizona State University'},
+    { name: 'University of Colorado'},
+    { name: 'University of Utah'},
+    { name: 'Bringham Young University'},
+
 ];
 
 // Loop through each school and add marker to the map
@@ -27,3 +36,4 @@ big12Schools.forEach(function(school) {
     .addTo(map)
     .bindPopup(school.name);
 });
+
